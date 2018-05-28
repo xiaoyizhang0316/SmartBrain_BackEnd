@@ -89,6 +89,6 @@ app.put('/image',(req,res) =>{
 	}).catch(err => res.status('400').json('Unable to count'))
 })
 
-app.listen(3001, () => {
-	console.log('connected');
+app.listen(process.env.PORT, () => {
+	console.log('connected ${process.env.PORT}');
 })
